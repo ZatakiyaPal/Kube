@@ -9,8 +9,8 @@ spec:
   - name: myapp2
     image: pateekkumawat/static:19
     resources:
-    limits:
-      memory: "128Mi"
-      cpu: "500m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
     ports:
       - containerPort: 80
