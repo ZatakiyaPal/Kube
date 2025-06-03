@@ -1,0 +1,22 @@
+apiVersion: apps/v1    # api calling part apps/v1 any type of deployment pod daeonsets etc .
+kind: Deployment       # Kind of resource we are creating,in this case of deployment,pod,daeonsets etc.
+metadata:              # Meta data for the deployment (name apavu).
+  name: myapp          # Name of the deployment.
+spec:                  # specification for the deployment (tamare kevu jotu che).
+  selector:            # Selector for the deployment , used to match pods. 
+    matchLabels:       # Labels to match pods with the deployment.
+      app: myapp
+  template:            # Template for the pods created by the deployment.
+    metadata:
+      labels:
+        app: myapp
+    spec:              # Specification for the pod for the containers
+      containers:
+      - name: myapp
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: <Port>
