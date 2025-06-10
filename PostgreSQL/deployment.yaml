@@ -11,6 +11,10 @@ spec:
       labels:
         app: postgres
     spec:
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+         claimName: postgres-persistent-volume-data0
       containers:
       - name: postgres
         image: postgres:15
@@ -28,4 +32,6 @@ spec:
               secretKeyRef:
                 name:  postgres-secret
                 key:  POSTGRES_PASSWORD
-          
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/postgresql/data
