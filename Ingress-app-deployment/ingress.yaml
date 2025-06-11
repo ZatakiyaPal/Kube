@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: Ingress-app-ex
+  name: ingress-app-ex
   labels:
-    name: Ingress-app-ex
+    name: ingress-app-ex
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
