@@ -6,10 +6,10 @@ metadata:
     name: nginx-store
 spec:
   volumes:
-    - name: web-content
-      hostPath: 
-        path: "/data/nginx-store"
-        type: Directory
+  - name: web-content
+    hostPath: 
+      path: "/data/nginx-store"
+      type: Directory
   containers:
   - name: nginx-store
     image: nginx:latest
