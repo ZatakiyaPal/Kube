@@ -9,7 +9,7 @@ spec:
   - name: web-content
     hostPath: 
       path: "/data/nginx-store"
-      type: Directory
+      type: directory
   containers:
   - name: nginx-store
     image: nginx:latest
