@@ -8,7 +8,7 @@ spec:
   volumes:
     - name: web-content
       hostPath: 
-        path: /data/nginx-store
+        path: "/data/nginx-store"
         type: Directory
   containers:
   - name: nginx-store
