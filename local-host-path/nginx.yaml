@@ -11,14 +11,15 @@ spec:
       app: nginx-store
   volumes:
     - name: web-content
-      hostPath: /data/nginx-store
-      type: Directory
+      hostPath: 
+        path: /data/nginx-store
+        type: Directory
   containers:
   - name: nginx-store
     image: nginx:latest
     resources:
     ports:
-      - containerPort: 80
+      - containerPort: 80 
     volumeMounts:
       - name: web-content
         mountPath: /usr/share/nginx/html
