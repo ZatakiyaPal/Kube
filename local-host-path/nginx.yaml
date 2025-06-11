@@ -5,10 +5,6 @@ metadata:
   labels:
     name: nginx-store
 spec:
-  selector:
-    name: nginx-store
-    labels: 
-      app: nginx-store
   volumes:
     - name: web-content
       hostPath: 
