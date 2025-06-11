@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apple-app-ex
+spec:
+  selector:
+    matchLabels:
+      app: apple-app-ex
+  template:
+    metadata:
+      labels:
+        app: apple-app-ex
+    spec:
+      containers:
+      - name: apple-app-ex
+        image: palzatakiya/application1
+        resources:
+        ports:
+        - containerPort: 80

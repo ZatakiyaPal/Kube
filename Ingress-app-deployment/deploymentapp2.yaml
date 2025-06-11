@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mango-app-ex
+spec:
+  selector:
+    matchLabels:
+      app: mango-app-ex
+  template:
+    metadata:
+      labels:
+        app: mango-app-ex
+    spec:
+      containers:
+      - name: mango-app-ex
+        image: palzatakiya/application1
+        resources:
+        ports:
+        - containerPort: 80
