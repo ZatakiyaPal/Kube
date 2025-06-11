@@ -5,10 +5,10 @@ metadata:
   labels:
     name: nginx-dynamic-store
 spec:
-volumes:
-  -name: web-content
-  persistentVolumeClaim:
-    claimName: nginx-dynamic-store-pvc
+  volumes:
+  - name: web-content
+    persistentVolumeClaim:
+      claimName: nginx-dynamic-store-pvc
   containers:
   - name: nginx-dynamic-store
     image: nginx image
