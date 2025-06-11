@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: mango-app-ex
-        image: palzatakiya/application1
+        image: palzatakiya/application2
         resources:
         ports:
         - containerPort: 80
