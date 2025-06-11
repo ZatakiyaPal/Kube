@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nginx-dynamic-store-pvc
+  name: nginx-store-dynamic-pvc
   labels:
     app: nginx-dynamic-store
 spec:
